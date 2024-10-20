@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>View Resume</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Include html2pdf.js here, as you are using it for PDF generation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Your Resume</h1>
+    </header>
+    <main class="container">
+        <section id="resume-form">
+            <h2>Input Your Details</h2>
+            <form id="form">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <input type="text" id="degree" placeholder="Your Degree" required>
+                <input type="text" id="school" placeholder="Your School" required>
+                <input type="number" id="gradYear" placeholder="Graduation Year" required>
+                <input type="text" id="jobTitle" placeholder="Your Job Title" required>
+                <input type="text" id="company" placeholder="Your Company" required>
+                <textarea id="jobDescription" placeholder="Job Description" required></textarea>
+                <input type="text" id="skills" placeholder="Your Skills (comma-separated)" required>
+                <button type="submit">Generate Resume</button>
+            </form>
+        </section>
+        <section id="generated-resume">
+            <h2>Generated Resume</h2>
+            <div id="resume-content"></div>
+
+            <!-- Copy Link Button -->
+            <button id="copy-link">Copy Link</button>
+
+            <!-- Download PDF Button -->
+            <button id="download-pdf">Download PDF</button>
+        </section>
+    </main>
+
+    <!-- Include your custom resume script after the DOM has been loaded -->
+    <script src="resume.js"></script>
+</body>
+</html>

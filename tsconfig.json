@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "target": "es6",                         // Use ES6 or higher if you support modern browsers
+        "module": "esnext",                      // Use ESNext modules (for modern bundlers or frameworks like Next.js)
+        "strict": true,                         
+        "esModuleInterop": true,                
+        "skipLibCheck": true,                   
+        "forceConsistentCasingInFileNames": true,
+        "moduleResolution": "node"               // Ensure proper module resolution for node modules
+    },
+    "include": [
+        "src/**/*.ts",                           // Include TypeScript files in the src folder
+        "src/@types/**/*.d.ts"                   // Include declaration files in the @types folder
+    ]
+}

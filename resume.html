@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>View Resume</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Your Resume</h1>
+        <button id="copy-link">Copy Link</button> <!-- Button to copy the link -->
+        <a href="index.html">Back to Form</a> <!-- Link to go back to the form -->
+    </header>
+    <main>
+        <div id="resume-content"></div>
+    </main>
+    <script src="resume.js"></script> <!-- Link to JavaScript file for this page -->
+    
+    <script>
+        // Copy link functionality
+        document.getElementById('copy-link').addEventListener('click', function() {
+            const url = window.location.href;
+            navigator.clipboard.writeText(url).then(() => {
+                alert('Link copied to clipboard!');
+            });
+        });
+    </script>
+</body>
+</html>
